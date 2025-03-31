@@ -275,8 +275,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Botón para descargar CV
   downloadCVButton.addEventListener('click', function() {
-    window.location.href = "assets/cv.pdf";
+      window.location.href = "CV_Eduardo_Rico_Moreno_EN.pdf";
   });
+
 
   // Resaltar el enlace de la sección actual en el menú
   const navLinks = document.querySelectorAll('#navLinks .nav-link');
