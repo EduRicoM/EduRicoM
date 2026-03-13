@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eduardo Rico Moreno - Portafolio</title>
 
+
   <!-- Fuentes y CSS externos -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- AOS CSS (animaciones on scroll) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -18,451 +20,543 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#hero">Eduardo Rico Moreno</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul id="navLinks" class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about" data-i18n="sobreMi">Sobre mí</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#education" data-i18n="estudios">Estudios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#languages" data-i18n="idiomas">Idiomas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills" data-i18n="habilidades">Habilidades Técnicas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects" data-i18n="proyectos">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#work" data-i18n="experiencia">Experiencia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact" data-i18n="contacto">Contacto</a>
-          </li>
-        </ul>
-        <!-- Selector de idioma -->
-        <select id="languageSelect" class="form-select w-auto ms-3"
-                style="background: url('img/es.png') no-repeat 95% center / 20px auto;">
-          <option value="es" data-icon="img/es.png">Español</option>
-          <option value="en" data-icon="img/en.png">English</option>
-          <option value="fr" data-icon="img/fr.png">Français</option>
-        </select>
-      </div>
-    </div>
-  </nav>
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">Eduardo Rico Moreno</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul id="navLinks" class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero" data-i18n="sobreMi">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work" data-i18n="experiencia">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects" data-i18n="proyectos">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills" data-i18n="habilidades">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" data-i18n="contacto">Contact</a>
+        </li>
+      </ul>
 
-  <!-- Sección Héroe -->
-  <header id="hero" class="hero d-flex align-items-center" data-aos="fade-in" data-aos-duration="1000">
-    <div class="container text-center">
-      <h1 data-i18n="title">Hola! Bienvenido a mi web personal.</h1>
-      <p data-i18n="subtitulo">Científico de Datos | Programador</p>
-      <a id="downloadCV" href="CV_Eduardo_Rico_Moreno_EN.pdf" download class="btn btn-primary" data-i18n="descargarCV">
-        Descargar CV
-      </a>
+      <select id="languageSelect" class="form-select w-auto ms-3"
+              style="background: url('img/es.png') no-repeat 95% center / 20px auto;">
+        <option value="es" data-icon="img/es.png">Español</option>
+        <option value="en" data-icon="img/en.png">English</option>
+        <option value="fr" data-icon="img/fr.png">Français</option>
+      </select>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- Sección Sobre Mí -->
-  <section id="about" class="section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="sobreMi">Sobre mí</h2>
-      <div class="row align-items-center mt-4">
-        <!-- Texto -->
-        <div class="col-md-8">
-          <p data-i18n="sobreMiText"></p>
-          <p data-i18n="sobreMiText2"></p>
-          <p data-i18n="sobreMiText3"></p>
-          <p data-i18n="sobreMiText4"></p>
-        </div>
-        <!-- Imagen -->
-        <div class="col-md-4 text-end">
-          <img src="img/profile.jpg" alt="Eduardo Rico Moreno" class="profile-img-about">
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Intro Section -->
+<section id="hero" class="intro-section">
+  <div class="container">
+    <div class="row align-items-center intro-content">
+      <div class="col-lg-7">
+        <span class="intro-badge">Management Solutions | Financial Data Consulting</span>
 
-  <!-- Sección Estudios -->
-  <section id="education" class="section bg-light" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="estudios">Estudios</h2>
-      <!-- Bachillerato -->
-      <div class="row mb-4 align-items-center">
-        <div class="col-md-3 text-center">
-          <img src="img/olmos_logo.png" alt="IES Los Olmos" class="edu-logo">
-        </div>
-        <div class="col-md-9 text-start">
-          <h3 data-i18n="bachillerato"></h3>
-          <p class="fw-bold" data-i18n="bachilleratoText"></p>
-          <p data-i18n="bachilleratoDesc"></p>
-        </div>
-      </div>
-      <!-- Universidad (texto alineado a la derecha, logo a la derecha) -->
-      <div class="row mb-4 align-items-center">
-        <div class="col-md-9 text-end">
-          <h3 data-i18n="universidad"></h3>
-          <p class="fw-bold" data-i18n="universidadText" style="text-align: justify; text-align-last: right;"></p>
-          <p data-i18n="universidadDesc" style="text-align: justify; text-align-last: right;"></p>
-        </div>
-        <div class="col-md-3 text-center d-flex align-items-center justify-content-end">
-          <img src="img/upv_logo.png" alt="Universidad Politécnica de Valencia" class="edu-logo">
-        </div>
-      </div>
-      <!-- Erasmus -->
-      <div class="row mb-4 align-items-center">
-        <div class="col-md-3 text-center">
-          <img src="img/slaska_logo.png" alt="Politechnika Slaska" class="edu-logo">
-        </div>
-        <div class="col-md-9 text-start">
-          <h3 data-i18n="erasmus"></h3>
-          <p class="fw-bold" data-i18n="erasmusText"></p>
-          <p data-i18n="erasmusDesc"></p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h1 data-i18n="title">Eduardo Rico Moreno</h1>
 
-  <!-- Sección Idiomas -->
-  <section id="languages" class="section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="idiomas">Idiomas</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-          <img src="img/es.png" alt="Español" class="language-icon">
-          <h4 data-i18n="idiomaEspanol"></h4>
-          <p data-i18n="idiomaEspanolDesc"></p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="img/en.png" alt="English" class="language-icon">
-          <h4 data-i18n="idiomaIngles"></h4>
-          <p data-i18n="idiomaInglesDesc"></p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="img/fr.png" alt="Français" class="language-icon">
-          <h4 data-i18n="idiomaFrances"></h4>
-          <p data-i18n="idiomaFrancesDesc"></p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="intro-subtitle" data-i18n="subtitulo">
+          FCRC Consultant | Data Science | Financial Risk Analytics
+        </p>
 
-  <!-- Sección Habilidades Técnicas -->
-  <section id="skills" class="section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="habilidades">Habilidades Técnicas</h2>
-      <div class="row spider-tools-row">
-        <div class="col-md-6 mb-4">
-          <canvas id="spiderChart" style="width: 100%; height: 300px;"></canvas>
-        </div>
-        <div class="col-md-6 mb-4">
-          <h4 class="text-center" data-i18n="herramientas">Herramientas y Tecnología</h4>
-          <div class="row">
-            <!-- Python -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/python_icon.png" alt="Python" class="tool-icon me-2">
-                <span data-i18n="toolPython" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-              </div>
-            </div>
-            <!-- R -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/r_icon.png" alt="R" class="tool-icon me-2">
-                <span data-i18n="toolR" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-              </div>
-            </div>
-            <!-- SQL -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/sql_icon.png" alt="SQL" class="tool-icon me-2">
-                <span data-i18n="toolSQL" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-              </div>
-            </div>
-            <!-- Matlab -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/matlab_icon.png" alt="Matlab" class="tool-icon me-2">
-                <span data-i18n="toolMatlab" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-              </div>
-            </div>
-            <!-- Tableau -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/tableau_icon.png" alt="Tableau" class="tool-icon me-2">
-                <span data-i18n="toolTableau" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-              </div>
-            </div>
-            <!-- Power BI -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/powerbi_icon.png" alt="Power BI" class="tool-icon me-2">
-                <span data-i18n="toolPowerBI" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-              </div>
-            </div>
-            <!-- Docker -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/docker_icon.png" alt="Docker" class="tool-icon me-2">
-                <span data-i18n="toolDocker" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-              </div>
-            </div>
-            <!-- Excel -->
-            <div class="col-sm-6 mb-4">
-              <div class="d-flex align-items-center">
-                <img src="img/excel_icon.png" alt="Excel" class="tool-icon me-2">
-                <span data-i18n="toolExcel" class="fw-bold"></span>
-              </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-              </div>
-            </div>
-          </div>
+        <p class="intro-text" data-i18n="sobreMiText">
+          I am a consultant at Management Solutions with a background in Data Science and a growing specialization in financial analytics, Big Data environments and cloud-based data solutions.
+        </p>
+
+        <p class="intro-text" data-i18n="sobreMiText2">
+          My work focuses on building analytical workflows, ETL processes and reporting solutions for financial institutions, combining technical rigor with a practical business-oriented mindset.
+        </p>
+
+        <div class="hero-buttons">
+          <a id="downloadCV" href="CV_Eduardo_Rico_Moreno_EN.pdf" download class="btn btn-primary me-2" data-i18n="descargarCV">
+            Download CV
+          </a>
+          <a href="https://www.linkedin.com/in/eduardo-rico-moreno/" target="_blank" class="btn btn-outline-dark me-2" data-i18n="linkedinBtn">
+            LinkedIn
+          </a>
+          <a href="https://github.com/eduricom" target="_blank" class="btn btn-outline-dark" data-i18n="githubBtn">
+            GitHub
+          </a>
         </div>
       </div>
-  
-      <!-- Competencias Blandas -->
-      <div class="row soft-skills-row">
-        <div class="col">
-          <h4 data-i18n="competencias">Competencias Blandas</h4>
-          <ul class="soft-skills-list">
-            <li data-i18n="competencia1"></li>
-            <li data-i18n="competencia2"></li>
-            <li data-i18n="competencia3"></li>
-            <li data-i18n="competencia4"></li>
-            <li data-i18n="competencia5"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Sección Proyectos -->
-  <section id="projects" class="section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="proyectos">Proyectos</h2>
-      <div class="row">
-        <!-- Proyecto 1 -->
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card project-card h-100 d-flex flex-column">
-            <img src="img/lnr_portada.png" alt="Oppositional Thinking Analysis" class="card-img-top">
-            <div class="card-body flex-grow-1 d-flex flex-column">
-              <h4 data-i18n="project1Title"></h4>
-              <p class="flex-grow-1" data-i18n="project1Desc"></p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">
-                <i class="bi bi-info-circle me-1"></i> <span data-i18n="verMas">Ver más</span>
-              </button>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Proyecto 2 -->
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card project-card h-100 d-flex flex-column">
-            <img src="img/mdp_portada.png" alt="Modelo de Predicción de Imágenes" class="card-img-top">
-            <div class="card-body flex-grow-1 d-flex flex-column">
-              <h4 data-i18n="project2Title"></h4>
-              <p class="flex-grow-1" data-i18n="project2Desc"></p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">
-                <i class="bi bi-info-circle me-1"></i> <span data-i18n="verMas">Ver más</span>
-              </button>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Proyecto 3 -->
-        <div class="col-md-4 mb-4 d-flex align-items-stretch">
-          <div class="card project-card h-100 d-flex flex-column">
-            <img src="img/edm_portada.png" alt="Valenbisi Navigator" class="card-img-top">
-            <div class="card-body flex-grow-1 d-flex flex-column">
-              <h4 data-i18n="project3Title"></h4>
-              <p class="flex-grow-1" data-i18n="project3Desc"></p>
-            </div>
-            <div class="card-footer d-flex justify-content-center">
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">
-                <i class="bi bi-info-circle me-1"></i> <span data-i18n="verMas">Ver más</span>
-              </button>
-              </a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-  
-  <!-- Modal Proyecto 1 -->
-  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project1ModalLabel" data-i18n="project1Title"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="text-center mb-3">
-            <img src="img/lnr3.png" class="img-fluid" alt="Detalle principal">
-          </div>
-          <p data-i18n="project1ModalText1"></p>
-          <p data-i18n="project1ModalText2"></p>
-          <p data-i18n="project1ModalText3"></p>
-          <p data-i18n="project1ModalText4"></p>
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <img src="img/lnr2.png" class="img-fluid w-100" alt="Detalle 2">
-            </div>
-            <div class="col-md-6">
-              <img src="img/lnr1.png" class="img-fluid w-100" alt="Detalle 3">
-            </div>
-          </div>
+
+      <div class="col-lg-5 text-center mt-5 mt-lg-0">
+        <div class="intro-image-wrapper">
+          <img src="img/profile.jpg" alt="Eduardo Rico Moreno" class="intro-image">
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Modal Proyecto 2 -->
-  <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project2ModalLabel" data-i18n="project2Title"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+</section>
+
+<!-- Experience Section -->
+<section id="work" class="section experience-section">
+  <div class="container">
+    <div class="section-heading text-center">
+      <div class="section-heading text-center">
+      <div class="section-heading text-center">
+      <h1 class="section-title" data-i18n="experiencia">Experience</h1>
+      <span class="section-kicker" data-i18n="experienceKicker">Professional Background</span>
+      <p class="section-description" data-i18n="experienceIntro">
+        My current work focuses on data, analytics and cloud-based solutions within financial consulting environments.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-card-header">
+        <div>
+          <h3 class="experience-role">FCRC Consultant</h3>
+          <p class="experience-company">Management Solutions</p>
         </div>
-        <div class="modal-body">
-          <p data-i18n="project2ModalText1"></p>
-          <p data-i18n="project2ModalText2"></p>
-          <p data-i18n="project2ModalText3"></p>
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <img src="img/mdp1.png" class="img-fluid w-100" alt="Detalle 1">
-            </div>
-            <div class="col-md-6">
-              <img src="img/mdp2.png" class="img-fluid w-100" alt="Detalle 2">
-            </div>
-          </div>
+        <div class="experience-meta">
+          <span class="experience-location">Madrid, Spain</span>
+          <span class="experience-date">
+            Sep 2025 — <span data-i18n="present">Present</span>
+          </span>
         </div>
+      </div>
+
+      <div class="experience-tags">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>AWS</span>
+        <span>QuickSight</span>
+        <span>ETL</span>
+        <span>Big Data</span>
+      </div>
+
+      <ul class="experience-list">
+        <li data-i18n="exp1">Develop data solutions in Big Data environments for financial institutions using Python and PySpark, building analytical notebooks, models and scalable processing engines.</li>
+        <li data-i18n="exp2">Design and maintain ETL pipelines and data quality workflows to integrate, cleanse and prepare data for advanced analytics and segmentation.</li>
+        <li data-i18n="exp3">Build BI dashboards with Amazon QuickSight and support the migration of data assets from on-premise systems to cloud environments.</li>
+      </ul>
+    </div>
+
+    <div class="experience-secondary">
+      <div class="experience-mini-card">
+        <h4 data-i18n="prevExperience">Previous Experience</h4>
+        <p data-i18n="prevExperienceText">
+          Additional experience in teaching and client-facing roles, strengthening communication, adaptability and problem-solving skills.
+        </p>
       </div>
     </div>
   </div>
-  
-  <!-- Modal Proyecto 3 -->
-  <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project3ModalLabel" data-i18n="project3Title"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <p data-i18n="project3ModalText1"></p>
-          <p data-i18n="project3ModalText2"></p>
-          <p data-i18n="project3ModalText3"></p>
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <img src="img/edm1.png" class="img-fluid w-100" alt="Detalle 1">
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+
+    <div class="section-heading text-center">
+      <h1 class="section-title" data-i18n="proyectos">Projects</h1>
+      <span class="section-kicker" data-i18n="projectsKicker">Selected Technical Work</span>
+      <p class="section-description" data-i18n="projectsIntro"></p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- PROJECT 1 -->
+      <div class="col-lg-4">
+        <div class="project-card-v2 h-100">
+
+          <img src="img/mri_portada.png" class="project-card-image">
+
+          <div class="project-card-body">
+
+            <h3 class="project-card-title" data-i18n="project1Title"></h3>
+            <p class="project-card-subtitle" data-i18n="project1Subtitle"></p>
+
+            <div class="project-tags">
+              <span>Deep Learning</span>
+              <span>MRI</span>
+              <span>ADNI</span>
+              <span>Python</span>
             </div>
-            <div class="col-md-6">
-              <img src="img/edm2.png" class="img-fluid w-100" alt="Detalle 2">
-            </div>
+
+            <p class="project-card-text" data-i18n="project1Desc"></p>
+            
+            <button class="btn btn-outline-dark project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#project1Modal">
+
+              <span data-i18n="viewDetails"></span>
+
+            </button>
+
           </div>
-          <p class="mt-3">
-            <span data-i18n="verAplicacion"></span> <a href="https://edm-project-szjgskvbbrwsegnpvbjusk.streamlit.app/" target="_blank">Valenbisi Navigator</a>
-          </p>
         </div>
       </div>
+
+
+      <!-- PROJECT 2 -->
+      <div class="col-lg-4">
+        <div class="project-card-v2 h-100">
+
+          <img src="img/lnr_portada.png" alt="Oppositional Thinking Analysis" class="project-card-image project-card-image-contain">
+
+          <div class="project-card-body">
+
+            <h3 class="project-card-title" data-i18n="project2Title"></h3>
+
+            <div class="project-tags">
+              <span>NLP</span>
+              <span>Transformers</span>
+              <span>Python</span>
+            </div>
+
+            <p class="project-card-text" data-i18n="project2Desc"></p>
+
+            <button class="btn btn-outline-dark project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#project2Modal">
+
+              <span data-i18n="viewDetails"></span>
+
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PROJECT 3 -->
+      <div class="col-lg-4">
+        <div class="project-card-v2 h-100">
+
+          <img src="img/edm_portada.png" class="project-card-image">
+
+          <div class="project-card-body">
+
+            <h3 class="project-card-title" data-i18n="project3Title"></h3>
+
+            <div class="project-tags">
+              <span>Streamlit</span>
+              <span>Python</span>
+              <span>APIs</span>
+            </div>
+
+            <p class="project-card-text" data-i18n="project3Desc"></p>
+
+            <button class="btn btn-outline-dark project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#project3Modal">
+
+              <span data-i18n="viewDetails"></span>
+
+            </button>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  
-  <!-- Sección Experiencia -->
-  <section id="work" class="section bg-light" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="experiencia">Experiencia</h2>
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-          <h3 data-i18n="profesor">Profesor Particular</h3>
-          <p data-i18n="profesorDesc"></p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="img/teaching.jpg" alt="Profesor particular" class="img-fluid experience-img">
+</section>
+
+<!-- Modal Project 1 -->
+<div class="modal fade project-modal" id="project1Modal">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+
+<div>
+<h5 class="modal-title" data-i18n="project1Title"></h5>
+<p class="modal-subtitle" data-i18n="project1Subtitle"></p>
+
+</div>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+
+<div class="modal-body">
+<img src="img/mri_portada.png" class="img-fluid modal-main-image">
+<div class="project-tags modal-tags">
+
+<span>Deep Learning</span>
+<span>MRI</span>
+<span>ADNI</span>
+<span>Python</span>
+
+</div>
+<p data-i18n="project1Intro"></p>
+<h6 class="modal-section-title" data-i18n="project1MethodTitle"></h6>
+<p data-i18n="project1MethodText"></p>
+<h6 class="modal-section-title" data-i18n="project1ResultsTitle"></h6>
+
+<ul class="modal-bullets">
+
+<li data-i18n="project1Bullet1"></li>
+<li data-i18n="project1Bullet2"></li>
+<li data-i18n="project1Bullet3"></li>
+
+<div class="project-modal-images">
+  <img src="img/tfg.png" alt="TFG preview">
+</div>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal Project 2 -->
+<div class="modal fade project-modal" id="project2Modal">
+
+<div class="modal-dialog modal-lg modal-dialog-centered">
+
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" data-i18n="project2Title"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+<div class="modal-body">
+<img src="img/lnr3.png" class="img-fluid modal-main-image">
+<p data-i18n="project2ModalText1"></p>
+<p data-i18n="project2ModalText2"></p>
+<p data-i18n="project2ModalText3"></p>
+<p data-i18n="project2ModalText4"></p>
+
+<div class="project-modal-images">
+  <img src="img/lnr1.png" alt="Oppositional Thinking Analysis preview">
+  <img src="img/lnr2.png" alt="Oppositional Thinking Analysis preview">
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal Project 3 -->
+<div class="modal fade project-modal" id="project3Modal">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" data-i18n="project3Title"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+
+<div class="modal-body">
+<img src="img/edm_portada.png" class="img-fluid modal-main-image">
+
+<p data-i18n="project3ModalText1"></p>
+<p data-i18n="project3ModalText2"></p>
+<p data-i18n="project3ModalText3"></p>
+
+<p class="project-link-line">
+
+<span data-i18n="viewApplication"></span>
+
+<a href="https://edm-project-szjgskvbbrwsegnpvbjusk.streamlit.app/" target="_blank">
+Valenbisi Navigator
+
+</a>
+<div class="project-modal-images">
+  <img src="img/edm1.png" alt="Valenbisi preview">
+  <img src="img/edm2.png" alt="Valenbisi preview">
+</div>
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Sección Estudios -->
+<section id="education" class="education-section section-light">
+  <div class="container">
+
+    <div class="section-heading text-center">
+      <h2 class="section-title" data-i18n="educationTitle">Education</h2>
+    </div>
+
+    <div class="education-grid">
+
+      <!-- Master -->
+      <div class="education-card">
+        <div class="education-card-content">
+          <div class="education-text">
+            <h3 class="education-title" data-i18n="masterTitle"></h3>
+            <p class="education-university" data-i18n="masterUniversity"></p>
+            <p class="education-date" data-i18n="masterDate"></p>
+
+            <p class="education-focus-title" data-i18n="educationFocus"></p>
+            <ul class="education-list">
+              <li data-i18n="masterFocus1"></li>
+              <li data-i18n="masterFocus2"></li>
+              <li data-i18n="masterFocus3"></li>
+            </ul>
+          </div>
+
+          <div class="education-logo-wrap">
+            <img src="img/comillas.png" class="education-logo">
+          </div>
         </div>
       </div>
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
-          <h3 data-i18n="camarero">Camarero en Hostelería</h3>
-          <p data-i18n="camareroDesc"></p>
-        </div>
-        <div class="col-md-6 order-md-1 text-center">
-          <img src="img/waiter.jpg" alt="Camarero en hostelería" class="img-fluid experience-img">
+
+      <!-- Bachelor -->
+      <div class="education-card">
+        <div class="education-card-content">
+          <div class="education-text">
+            <h3 class="education-title" data-i18n="bachelorTitle"></h3>
+            <p class="education-university" data-i18n="bachelorUniversity"></p>
+            <p class="education-date" data-i18n="bachelorDate"></p>
+
+            <p class="education-focus-title" data-i18n="educationFocus"></p>
+            <ul class="education-list">
+              <li data-i18n="bachelorFocus1"></li>
+              <li data-i18n="bachelorFocus2"></li>
+              <li data-i18n="bachelorFocus3"></li>
+              <li data-i18n="bachelorFocus4"></li>
+              <li data-i18n="bachelorFocus5"></li>
+            </ul>
+          </div>
+
+          <div class="education-logo-wrap">
+            <img src="img/upv_logo.png" class="education-logo">
+          </div>
         </div>
       </div>
+
     </div>
-  </section>
-  
-  <!-- Sección Contacto -->
-  <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container text-center">
-      <h2 class="section-title" data-i18n="contacto">Contacto</h2>
-      <p>
-        <i class="bi bi-envelope"></i> <span data-i18n="correo">Email:</span> 
-        <a href="mailto:rm.eduardo25@gmail.com">rm.eduardo25@gmail.com</a>
-      </p>
-      <p>
-        <i class="bi bi-telephone"></i> <span data-i18n="telefono">Teléfono:</span> 
-        <a href="tel:+34694425575">+34 694 42 55 75</a>
-      </p>
-      <p>
-        <i class="bi bi-linkedin"></i> <span data-i18n="linkedin">LinkedIn:</span> 
-        <a href="https://www.linkedin.com/in/eduardo-rico-moreno/" target="_blank">Eduardo Rico Moreno</a>
-      </p>
-      <p>
-        <i class="bi bi-github"></i> <span data-i18n="github">GitHub:</span> 
-        <a href="https://github.com/EduRicoM" target="_blank">EduRicoM</a>
-      </p>
+
+  </div>
+</section>
+
+<!-- BLOQUE PRINCIPAL -->
+<section id="skills" class="skills-section section-muted">
+  <div class="container">
+
+    <div class="section-heading text-center">
+      <h2 class="section-title" data-i18n="skillsTitle">Skills & Expertise</h2>
+      <span class="section-kicker" data-i18n="skillsKicker">Technical profile</span>
+      <p class="section-description" data-i18n="skillsIntro"></p>
     </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center py-3">
-    <div class="container">
-      <p class="mb-0">Eduardo Rico Moreno</p>
-    </div>
-  </footer>
+
+    <div class="skills-layout">
+
+      <div class="skills-main-card">
+        <h3 class="skills-card-title" data-i18n="technicalSkillsTitle">Technical Skills</h3>
+
+        <div class="skills-group">
+          <p class="skills-group-title" data-i18n="skillsGroup1">Programming & Data</p>
+          <div class="skills-tags">
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fas fa-database"></i> SQL</span>
+            <span><i class="fas fa-bolt"></i> PySpark</span>
+            <span><i class="fas fa-chart-line"></i> R</span>
+            <span><i class="fas fa-square-root-alt"></i> MATLAB</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <p class="skills-group-title" data-i18n="skillsGroup2">Cloud & Analytics</p>
+          <div class="skills-tags">
+            <span><i class="fab fa-aws"></i> AWS</span>
+            <span><i class="fas fa-search"></i> Athena</span>
+            <span><i class="fas fa-brain"></i> SageMaker</span>
+            <span><i class="fas fa-chart-pie"></i> QuickSight</span>
+            <span><i class="fas fa-random"></i> ETL</span>
+            <span><i class="fas fa-check-circle"></i> Data Quality</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <p class="skills-group-title" data-i18n="skillsGroup3">Data Science</p>
+          <div class="skills-tags">
+            <span><i class="fas fa-robot"></i> Machine Learning</span>
+            <span><i class="fas fa-network-wired"></i> Deep Learning</span>
+            <span><i class="fas fa-language"></i> NLP</span>
+            <span><i class="fas fa-signal"></i> Statistical Analysis</span>
+            <span><i class="fas fa-chart-bar"></i> Data Visualization</span>
+            <span><i class="fas fa-plug"></i> APIs</span>
+            <span><i class="fas fa-window-maximize"></i> Streamlit</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-card">
+        <h3 class="skills-card-title" data-i18n="languagesTitle">Languages</h3>
+
+        <div class="language-cards">
+          <div class="language-mini-card">
+            <img src="img/es.png" class="language-flag-img">
+            <p class="language-name">Spanish</p>
+            <p class="language-level" data-i18n="langSpanish"></p>
+          </div>
+
+          <div class="language-mini-card">
+            <img src="img/en.png" class="language-flag-img">
+            <p class="language-name">English</p>
+            <p class="language-level" data-i18n="langEnglish"></p>
+          </div>
+
+          <div class="language-mini-card">
+            <img src="img/fr.png" class="language-flag-img">
+            <p class="language-name">French</p>
+            <p class="language-level" data-i18n="langFrench"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-card soft-card">
+        <h3 class="skills-card-title" data-i18n="softSkillsTitle">Soft Skills</h3>
+
+        <div class="skills-tags soft-tags">
+          <span data-i18n="soft1">Analytical Thinking</span>
+          <span data-i18n="soft2">Problem Solving</span>
+          <span data-i18n="soft3">Communication</span>
+          <span data-i18n="soft4">Teamwork</span>
+          <span data-i18n="soft5">Adaptability</span>
+          <span data-i18n="soft6">Business-Oriented Mindset</span>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      </section>
+
+<!-- Sección Contacto -->
+<section id="contact" class="section" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container text-center">
+    <h2 class="section-title" data-i18n="contacto">Contacto</h2>
+    <p>
+      <i class="bi bi-envelope"></i> <span data-i18n="correo">Email:</span> 
+      <a href="mailto:rm.eduardo25@gmail.com">rm.eduardo25@gmail.com</a>
+    </p>
+    <p>
+      <i class="bi bi-telephone"></i> <span data-i18n="telefono">Teléfono:</span> 
+      <a href="tel:+34694425575">+34 694 42 55 75</a>
+    </p>
+    <p>
+      <i class="bi bi-linkedin"></i> <span data-i18n="linkedin">LinkedIn:</span> 
+      <a href="https://www.linkedin.com/in/eduardo-rico-moreno/" target="_blank">Eduardo Rico Moreno</a>
+    </p>
+    <p>
+      <i class="bi bi-github"></i> <span data-i18n="github">GitHub:</span> 
+      <a href="https://github.com/EduRicoM" target="_blank">EduRicoM</a>
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">Eduardo Rico Moreno</p>
+  </div>
+</footer>
   
   <!-- Librerías JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -474,5 +568,12 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
   <!-- Tu archivo main.js -->
   <script src="js/main.js"></script>
+
+  <!-- Lightbox -->
+  <div id="imageLightbox" class="image-lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="Expanded preview">
+  </div>
+
 </body>
 </html>
